@@ -1,0 +1,52 @@
+.introduction {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  z-index: 99;
+  background-color: hsl(var(--background));
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+    path {
+      fill: hsl(var(--background));
+    }
+  }
+
+  .dot {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: hsl(var(--foreground));
+    border-radius: 50%;
+    margin-right: 14px;
+  }
+
+  p {
+    display: flex;
+    color: hsl(var(--foreground));
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .percent {
+    position: relative;
+    z-index: 1;
+    color: hsl(var(--muted-foreground));
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    font-variant-numeric: tabular-nums;
+  }
+}
